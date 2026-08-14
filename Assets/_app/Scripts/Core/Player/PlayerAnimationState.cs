@@ -21,7 +21,7 @@ namespace STD.Core.Player
             CheckAnimation();
         }
 
-        public void ChangeAnimation(string animation, float crossfade = 0.2f)
+        public void ChangeAnimation(string animation, float crossfade = 0.1f)
         {
             if (currentAnimation != animation)
             {
