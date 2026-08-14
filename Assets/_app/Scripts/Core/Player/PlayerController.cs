@@ -50,7 +50,7 @@ namespace STD.Core.Player
             Quaternion rotation = Quaternion.RotateTowards(
                 body.rotation,
                 targetRotation,
-                MAX_DEGREES * dt
+                MAX_DEGREES_ROTATE * dt
             );
 
             body.MoveRotation(rotation);
