@@ -22,13 +22,19 @@ namespace STD.Core.Player
         private void OnEnable()
         {
             Observer.Subscribe("OnBaseATKClick", BaseATK);
-            Observer.Subscribe("OnFinishedBaseATK", OnFinishedBaseATKCallback);
+            Observer.Subscribe("OnDash", Dash);
+
+            Observer.Subscribe("OnFinishedBaseATK", OnFinishedSkill);
+            Observer.Subscribe("OnFinishedDash", OnFinishedSkill);
         }
 
         private void OnDisable()
         {
             Observer.Unsubscribe("OnBaseATKClick", BaseATK);
-            Observer.Unsubscribe("OnFinishedBaseATK", OnFinishedBaseATKCallback);
+            Observer.Unsubscribe("OnDash", Dash);
+
+            Observer.Unsubscribe("OnFinishedBaseATK", OnFinishedSkill);
+            Observer.Unsubscribe("OnFinishedDash", OnFinishedSkill);
         }
 
         private void Update()
@@ -47,6 +53,8 @@ namespace STD.Core.Player
 
         private void CheckAnimation()
         {
+            if(currentAnimation == "Spell3")
+                return;
             if (currentAnimation == "graves_attack1_anm" && input.MoveDirection == Vector2.zero)
                 return;
             if (input.MoveDirection != Vector2.zero)
@@ -83,6 +91,7 @@ namespace STD.Core.Player
         }
 
         private void BaseATK() => ChangeAnimation("graves_attack1_anm");
-        public void OnFinishedBaseATKCallback() => ChangeAnimation("");
+        private void Dash() => ChangeAnimation("Spell3");
+        public void OnFinishedSkill() => ChangeAnimation("");
     }
 }

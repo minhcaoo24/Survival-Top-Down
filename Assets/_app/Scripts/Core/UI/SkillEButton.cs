@@ -1,3 +1,4 @@
+using STD.Utils;
 using UnityEngine;
 
 namespace STD.Core.UI
@@ -6,8 +7,7 @@ namespace STD.Core.UI
     {
         public override void HandleClick()
         {
-            base.HandleClick();
-            Debug.Log("EEE");
+            Observer.Publish("OnEClick");
         }
     }
 }

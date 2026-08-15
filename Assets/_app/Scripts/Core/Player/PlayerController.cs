@@ -9,7 +9,7 @@ namespace STD.Core.Player
     public class PlayerController : MonoBehaviour, IMovable
     {
         [SerializeField] private InputReader input;
-        [SerializeField] private Rigidbody body;
+        public Rigidbody body;
 
         private void FixedUpdate()
         {
