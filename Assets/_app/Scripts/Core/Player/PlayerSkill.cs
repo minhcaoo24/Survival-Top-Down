@@ -8,19 +8,31 @@ namespace STD.Core.Player
     using static Utils.Constants.Player;
     using static Utils.Constants.Bullet;
 
-    public class PlayerAttack : MonoBehaviour
+    public class PlayerSkill : MonoBehaviour
     {
-        public BaseATKButton baseATK;
+        private BaseATKButton baseATK;
         [SerializeField] private Transform placeHolder;
+        [SerializeField] private PlayerController controller;
+
+        private bool isDashing;
+        private bool canDash = true;
 
         private void OnEnable()
         {
             Observer.Subscribe("OnBaseATKClick", BaseATKHandle);
+            Observer.Subscribe("OnEClick", async () =>
+            {
+                await DashHandle();
+            });
         }
 
         private void OnDisable()
         {
             Observer.Unsubscribe("OnBaseATKClick", BaseATKHandle);
+            Observer.Unsubscribe("OnEClick", async () =>
+            {
+                await DashHandle();
+            });
         }
 
         private void BaseATKHandle()
@@ -35,6 +47,48 @@ namespace STD.Core.Player
             ShootBullet(left);
             ShootBullet(center);
             ShootBullet(right);
+        }
+
+        private async Awaitable DashHandle()
+        {
+            if (!canDash || isDashing)
+                return;
+
+            isDashing = true;
+            canDash = false;
+
+            Vector3 startPosition = transform.position;
+            Vector3 direction = transform.forward;
+            Vector3 targetPosition = startPosition + direction * DASH_DISTANCE;
+
+            float elapsed = 0f;
+
+            while (elapsed < DASH_DURATION)
+            {
+                elapsed += Time.deltaTime;
+
+                float t = Mathf.Clamp01(elapsed / DASH_DURATION);
+
+                transform.position = Vector3.Lerp(
+                    startPosition,
+                    targetPosition,
+                    t
+                );
+
+                Observer.Publish("OnDash");
+
+                await Awaitable.NextFrameAsync();
+            }
+
+            transform.position = targetPosition;
+
+            isDashing = false;
+
+            await Awaitable.WaitForSecondsAsync(DASH_COOLDOWN);
+            Debug.Log("Can dash");
+
+            canDash = true;
+
         }
 
         private void ShootBullet(Vector3 direction)
