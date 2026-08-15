@@ -1,4 +1,5 @@
 using UnityEngine;
+using STD.Utils;
 
 namespace STD.Core.UI
 {
@@ -6,8 +7,7 @@ namespace STD.Core.UI
     {
         public override void HandleClick()
         {
-            base.HandleClick();
-            Debug.Log("WWW");
+            Observer.Publish("OnWClick");
         }
     }
 }

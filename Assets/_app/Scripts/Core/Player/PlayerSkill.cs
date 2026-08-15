@@ -17,6 +17,9 @@ namespace STD.Core.Player
         private bool isDashing;
         private bool canDash = true;
 
+        private bool canPlaceBoommpppppp;
+        private GameObject bombPrefab;
+
         private void OnEnable()
         {
             Observer.Subscribe("OnBaseATKClick", BaseATKHandle);
@@ -88,7 +91,22 @@ namespace STD.Core.Player
             Debug.Log("Can dash");
 
             canDash = true;
+        }
 
+        private async Awaitable Bombbb()
+        {
+            if(!canPlaceBoommpppppp)
+                return;
+
+            Vector3 place = this.transform.position;
+
+            bombPrefab.transform.position = place;
+            bombPrefab.SetActive(true);
+            canPlaceBoommpppppp = false;
+
+            //TODO: Update UI cooldown
+            await Awaitable.WaitForSecondsAsync(BOMBBB_COOLDOWN + BOMBBB_EXPLOSION_DELAY);
+            canPlaceBoommpppppp = true;
         }
 
         private void ShootBullet(Vector3 direction)

@@ -6,9 +6,14 @@ namespace STD.Utils
         {
             public const int MOVE_SPEED = 2;
             public const float MAX_DEGREES_ROTATE = 720f;
+
             public const float DASH_DISTANCE = 3f;
             public const float DASH_DURATION = 0.5f;
             public const float DASH_COOLDOWN = 6f;
+
+            public const float BOMBBB_EXPLOSION_DELAY = 2f;
+            public const float BOMBBB_EXPLOSION_RADIUS = 5f;
+            public const float BOMBBB_COOLDOWN = 12f;
         }
 
         public struct Bullet
