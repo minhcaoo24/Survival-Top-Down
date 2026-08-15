@@ -17,8 +17,8 @@ namespace STD.Core.Player
         private bool isDashing;
         private bool canDash = true;
 
-        private bool canPlaceBoommpppppp;
-        private GameObject bombPrefab;
+        private bool canPlaceBoommpppppp = true;
+        [SerializeField] private BombScript bombPrefab;
 
         private void OnEnable()
         {
@@ -26,6 +26,10 @@ namespace STD.Core.Player
             Observer.Subscribe("OnEClick", async () =>
             {
                 await DashHandle();
+            });
+            Observer.Subscribe("OnWClick", async () =>
+            {
+                await Bombbb();
             });
         }
 
@@ -35,6 +39,10 @@ namespace STD.Core.Player
             Observer.Unsubscribe("OnEClick", async () =>
             {
                 await DashHandle();
+            });
+            Observer.Unsubscribe("OnWClick", async () =>
+            {
+                await Bombbb();
             });
         }
 
@@ -100,12 +108,13 @@ namespace STD.Core.Player
 
             Vector3 place = this.transform.position;
 
-            bombPrefab.transform.position = place;
-            bombPrefab.SetActive(true);
+            bombPrefab.transform.position = new Vector3(place.x, 1, place.z);
+            bombPrefab.gameObject.SetActive(true);
             canPlaceBoommpppppp = false;
 
             //TODO: Update UI cooldown
             await Awaitable.WaitForSecondsAsync(BOMBBB_COOLDOWN + BOMBBB_EXPLOSION_DELAY);
+            Debug.Log("Can place boooooooombbbbbbbbbbb");
             canPlaceBoommpppppp = true;
         }
 
