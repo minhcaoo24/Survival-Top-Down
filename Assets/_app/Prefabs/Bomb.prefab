@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6064737964494108429}
   - component: {fileID: 3132794774078595460}
   - component: {fileID: 2902554597356516534}
+  - component: {fileID: 2065093017006922481}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -141,6 +142,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &2065093017006922481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357730938357772796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbc908f5005f46beb8641e4da472da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::STD.Core.Player.BombScript
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  explosionEffect: {fileID: 1375423613847150200}
 --- !u!1001 &2028524506272118810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -149,6 +166,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3613288221299547829}
     m_Modifications:
+    - target: {fileID: 1094577256779294306, guid: 43d842fef00714ddbabade29d47e289d, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094577256779294306, guid: 43d842fef00714ddbabade29d47e289d, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7174774811083625179, guid: 43d842fef00714ddbabade29d47e289d, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -208,8 +233,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8680254492534705080, guid: 43d842fef00714ddbabade29d47e289d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5969768177565331964}
   m_SourcePrefab: {fileID: 100100000, guid: 43d842fef00714ddbabade29d47e289d, type: 3}
+--- !u!198 &1375423613847150200 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1094577256779294306, guid: 43d842fef00714ddbabade29d47e289d, type: 3}
+  m_PrefabInstance: {fileID: 2028524506272118810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7228472234078319522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8680254492534705080, guid: 43d842fef00714ddbabade29d47e289d, type: 3}
+  m_PrefabInstance: {fileID: 2028524506272118810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5969768177565331964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7228472234078319522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c79f68f72e048f6ab4c9922ed20b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::STD.Utils.ParticleCollision
 --- !u!4 &9202877033284725441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7174774811083625179, guid: 43d842fef00714ddbabade29d47e289d, type: 3}

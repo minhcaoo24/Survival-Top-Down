@@ -13,10 +13,10 @@ namespace STD.Core.Player
 
         private void FixedUpdate()
         {
-            Move(input.MoveDirection, MOVE_SPEED, Time.deltaTime);
+            Move(input.MoveDirection, PLAYER_MOVE_SPEED, Time.deltaTime);
         }
 
-        public void Move(Vector2 input, int speed, float dt)
+        public void Move(Vector2 input, float speed, float dt)
         {
             if (!body)
             {

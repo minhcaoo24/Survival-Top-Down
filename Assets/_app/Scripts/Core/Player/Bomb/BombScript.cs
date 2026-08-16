@@ -1,10 +1,12 @@
+using STD.Core.Interface;
 using UnityEngine;
 
-namespace STD.Core.Player
+namespace STD.Core.Player.Bomb
 {
-    using static STD.Utils.Constants.Player;
+    using static STD.Utils.Constants.Bomb;
     public class BombScript : MonoBehaviour
     {
+        [SerializeField] private LayerMask enemyLayer;
         [SerializeField] private ParticleSystem explosionEffect;
 
         private bool isExploding;
@@ -24,19 +26,25 @@ namespace STD.Core.Player
             explosionEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
 
             await Awaitable.WaitForSecondsAsync(BOMBBB_EXPLOSION_DELAY);
+            Collider[] hits = Physics.OverlapSphere(
+                transform.position,
+                BOMBBB_EXPLOSION_RADIUS,
+                enemyLayer
+            );
+
+            foreach (Collider hit in hits)
+            {
+                if (hit.TryGetComponent<IDamageable>(out IDamageable damageable))
+                {
+                    // damageable.TakeDamage(DASHBOMB_EXPLOSION_DAMAGE);
+                    Debug.Log("BOMOOOOOOOOO");
+                }
+            }
 
             if (!this || !gameObject.activeInHierarchy)
                 return;
 
             explosionEffect.Play();
-
-            // while (explosionEffect.IsAlive(true))
-            // {
-            //     await Awaitable.NextFrameAsync();
-
-            //     if (!this || !gameObject.activeInHierarchy)
-            //         return;
-            // }
 
             await Awaitable.WaitForSecondsAsync(1f);
 

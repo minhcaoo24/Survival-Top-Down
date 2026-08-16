@@ -2,6 +2,7 @@ using STD.Core.Interface;
 using STD.Utils;
 using STD.Utils.Input;
 using UnityEngine;
+using System;
 
 namespace STD.Core.Player
 {
@@ -21,20 +22,20 @@ namespace STD.Core.Player
 
         private void OnEnable()
         {
-            Observer.Subscribe("OnBaseATKClick", BaseATK);
-            Observer.Subscribe("OnDash", Dash);
+            Observer.Subscribe("SHOOOOT", (Action)BaseATK);
+            Observer.Subscribe("OnDash", (Action)Dash);
 
-            Observer.Subscribe("OnFinishedBaseATK", OnFinishedSkill);
-            Observer.Subscribe("OnFinishedDash", OnFinishedSkill);
+            Observer.Subscribe("OnFinishedBaseATK", (Action)OnFinishedSkill);
+            Observer.Subscribe("OnFinishedDash", (Action)OnFinishedSkill);
         }
 
         private void OnDisable()
         {
-            Observer.Unsubscribe("OnBaseATKClick", BaseATK);
-            Observer.Unsubscribe("OnDash", Dash);
+            Observer.Unsubscribe("SHOOOOT", (Action)BaseATK);
+            Observer.Unsubscribe("OnDash", (Action)Dash);
 
-            Observer.Unsubscribe("OnFinishedBaseATK", OnFinishedSkill);
-            Observer.Unsubscribe("OnFinishedDash", OnFinishedSkill);
+            Observer.Unsubscribe("OnFinishedBaseATK", (Action)OnFinishedSkill);
+            Observer.Unsubscribe("OnFinishedDash", (Action)OnFinishedSkill);
         }
 
         private void Update()
