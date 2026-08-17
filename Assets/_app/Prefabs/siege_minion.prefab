@@ -1,0 +1,304 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3888272935619819820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3616273621294235136}
+  m_Layer: 0
+  m_Name: bulletPlaceHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3616273621294235136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3888272935619819820}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8879059772953536545}
+  m_Father: {fileID: 941017944882542710}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2889793022000851710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3616273621294235136}
+    m_Modifications:
+    - target: {fileID: 5990450100493107935, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990450100493107935, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990450100493107935, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990450100493107935, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990450100493107935, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990450100493107935, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990450100493107935, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990450100493107935, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990450100493107935, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990450100493107935, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131072350184055083, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_Name
+      value: Canon_Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131072350184055083, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231211553649176569, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: siegeMinionTransform
+      value: 
+      objectReference: {fileID: 941017944882542710}
+    - target: {fileID: 8817268312395030693, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+--- !u!4 &8879059772953536545 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5990450100493107935, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+  m_PrefabInstance: {fileID: 2889793022000851710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9107174091396400391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6231211553649176569, guid: af1980bf5e4c64675827ca0f3b3058a1, type: 3}
+  m_PrefabInstance: {fileID: 2889793022000851710}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75790db12e544053970bdc94be3dd06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::STD.Core.Entity.SiegeMinion.SiegeMinionBullet
+--- !u!1001 &5037828834290584618
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2060789707785385855, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5aa85bfce56ac4c588e7fe7a97f4fd29, type: 2}
+    - target: {fileID: 2107409826236812522, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      propertyPath: m_Name
+      value: siege_minion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3616273621294235136}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2107409826236812522, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 101487839489259243}
+    - targetCorrespondingSourceObject: {fileID: 2107409826236812522, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5645982102197414919}
+    - targetCorrespondingSourceObject: {fileID: 2107409826236812522, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 722484191712755653}
+    - targetCorrespondingSourceObject: {fileID: 2107409826236812522, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1392615551105702978}
+    - targetCorrespondingSourceObject: {fileID: 2107409826236812522, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5287815083361101727}
+  m_SourcePrefab: {fileID: 3150474306388093854, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+--- !u!4 &941017944882542710 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3970243614316841892, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+  m_PrefabInstance: {fileID: 5037828834290584618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2778558311047857323 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -2060789707785385855, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+  m_PrefabInstance: {fileID: 5037828834290584618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6401568560436412608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2107409826236812522, guid: 3aa6901dadd0d4daab1ab3de42b63b96, type: 3}
+  m_PrefabInstance: {fileID: 5037828834290584618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &101487839489259243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401568560436412608}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.2241427, z: 1.4043121}
+  m_Center: {x: 0, y: 0.61886543, z: 0.25584412}
+--- !u!54 &5645982102197414919
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401568560436412608}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &722484191712755653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401568560436412608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3f361258a3e4317b75df3278fee090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::STD.Core.Entity.SiegeMinion.SiegeMinionScript
+  player: {fileID: 0}
+  minDistanceToAttack: 3
+  animationState: {fileID: 1392615551105702978}
+  attackCooldown: 1
+--- !u!114 &1392615551105702978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401568560436412608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c71af4314294c64999592fc7d15400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::STD.Core.Entity.SiegeMinion.SiegeMinionAnimationState
+  <Animator>k__BackingField: {fileID: 2778558311047857323}
+--- !u!114 &5287815083361101727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401568560436412608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e726d055287c146f8821d6c995eecb0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::STD.Core.Entity.SiegeMinion.SiegeMinionShoot
+  bullet: {fileID: 9107174091396400391}
+  placeHolder: {fileID: 3616273621294235136}

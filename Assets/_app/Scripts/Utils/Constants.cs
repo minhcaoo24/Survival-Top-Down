@@ -39,6 +39,15 @@ namespace STD.Utils
         {
             public const int SIEGE_MAX_HP = 180;
             public const float SIEGE_MOVE_SPEED = 2.7f;
+            public const float SIEGE_BULLET_MOVE_SPEED = 10f;
+            public const float SIEGE_BULLET_MAX_DISTANCE = 5f;
+
+            public struct Poison
+            {
+                public const float POISON_DAMAGE = 30f;
+                public const float POISON_DURATION = 3f;
+                public const float POISON_TICK_INTERVAL = 1f;
+            }
         }
 
         public struct SuperMinion //con chuy`

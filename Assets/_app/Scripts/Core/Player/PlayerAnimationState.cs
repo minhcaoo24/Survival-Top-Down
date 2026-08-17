@@ -54,6 +54,8 @@ namespace STD.Core.Player
 
         private void CheckAnimation()
         {
+            if(currentAnimation == "Death")
+                return;
             if(currentAnimation == "Spell3")
                 return;
             if (currentAnimation == "graves_attack1_anm" && input.MoveDirection == Vector2.zero)

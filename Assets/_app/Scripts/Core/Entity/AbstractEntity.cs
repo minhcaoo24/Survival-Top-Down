@@ -6,10 +6,11 @@ namespace STD.Core.Entity
 {
     public abstract class AbstractEntity : MonoBehaviour, IDamageable
     {
-        protected int MaxHP;
+        public int MaxHP;
         public int CurrentHP { get; private set; }
         public int Armor { get; private set; }
         public float DamageMultiplier { get; private set; }
+        public float EXP;
 
         protected virtual void Awake()
         {

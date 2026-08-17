@@ -13,7 +13,7 @@ namespace STD.Utils
 
         public int Count => pool.Count;
 
-        protected virtual void Awake(){}
+        protected virtual void Awake() { }
         private void Start()
         {
             if (!prefab)
@@ -31,7 +31,6 @@ namespace STD.Utils
                 item.transform.localRotation = Quaternion.identity;
                 pool.Enqueue(item);
             }
-            Debug.Log($"For initialize, in pool {Count}");
         }
 
         public T Get()
