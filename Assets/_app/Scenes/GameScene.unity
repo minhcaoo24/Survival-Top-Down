@@ -2934,38 +2934,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1481563110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5905638529261711217, guid: 6fcbf0bcd7eac49e194f6174de515446, type: 3}
-  m_PrefabInstance: {fileID: 3497446812359902651}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1481563119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481563110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1165f016aa20b452cb6871d3954c9cf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::STD.Core.Player.PlayerAudio
-  audioSource: {fileID: 1481563120}
-  Graves_E_1: {fileID: 8300000, guid: 190cf196841394da9ad7c5deca94acfd, type: 3}
-  Graves_E_2: {fileID: 8300000, guid: 11516b2c0d3074e91b9a102db9b64c68, type: 3}
-  Graves_W_1: {fileID: 8300000, guid: 259ea2ca46b344098ae6748493dcf44c, type: 3}
-  Graves_W_2: {fileID: 8300000, guid: 32f3fb288ab1c4ed5ac91603f6e21b99, type: 3}
-  Graves_W_3: {fileID: 8300000, guid: a1c7e6945828f48779e59b9f7a348aa0, type: 3}
-  Graves_W_4: {fileID: 8300000, guid: 7be6920c3908f481dba18f036c52d70f, type: 3}
-  Graves_Startgame: {fileID: 8300000, guid: 04b46446cb82e466c88e35beafa9e518, type: 3}
-  currentE: 0
-  currentW: 0
---- !u!82 &1481563120 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1255412747540866727, guid: 6fcbf0bcd7eac49e194f6174de515446, type: 3}
-  m_PrefabInstance: {fileID: 3497446812359902651}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1491265756
 GameObject:
   m_ObjectHideFlags: 0
@@ -3829,10 +3797,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1255412747540866727, guid: 6fcbf0bcd7eac49e194f6174de515446, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2179520688865393273, guid: 6fcbf0bcd7eac49e194f6174de515446, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3868,10 +3832,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5905638529261711217, guid: 6fcbf0bcd7eac49e194f6174de515446, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1481563119}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fcbf0bcd7eac49e194f6174de515446, type: 3}
 --- !u!1 &3647550187857300848
 GameObject:

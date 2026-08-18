@@ -3,6 +3,7 @@ using STD.Core.Interface;
 using STD.Core.Player;
 using STD.Utils;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace STD.Core.Entity
 {
@@ -40,7 +41,7 @@ namespace STD.Core.Entity
         {
             animationState.ChangeAnimation("Death");
             Destroy(this, 3f);
-            Time.timeScale = 0;
+            SceneManager.LoadScene(2);
         }
     }
 }
