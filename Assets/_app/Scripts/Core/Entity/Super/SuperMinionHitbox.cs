@@ -1,3 +1,4 @@
+using STD.Core.Interface;
 using STD.Utils;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ namespace STD.Core.Entity.SuperMinion
             if (!other.CompareTag("Player"))
                 return;
 
-            Debug.Log("HITTTT");
+            other.GetComponent<IDamageable>().TakeDamage(30);
         }
     }
 }

@@ -19,9 +19,9 @@ namespace STD.Core.Entity.SiegeMinion
             Observer.Unsubscribe("Canon_Shoot", (Action)Shoot);
         }
 
-        private void Shoot() 
+        private void Shoot()
         {
-            bullet = SiegeMinionPool.Singleton.Get();
+            bullet = SiegeMinionBulletPool.Singleton.Get();
             bullet.gameObject.SetActive(true);
             bullet.transform.position = placeHolder.position;
         }

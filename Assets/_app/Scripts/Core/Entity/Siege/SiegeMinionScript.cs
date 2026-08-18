@@ -32,7 +32,8 @@ namespace STD.Core.Entity.SiegeMinion
         public override void Die()
         {
             animationState.ChangeAnimation("Death2");
-            Destroy(this.gameObject);
+            --WaveGenerator.Singleton.SiegeMinionRemains;
+            SiegeMinionPool.Singleton.GoBackToPool(this);
         }
 
         public override void TakeDamage(int damage)

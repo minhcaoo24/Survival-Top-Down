@@ -10,19 +10,29 @@ namespace STD.Core.Player
     {
         private void OnEnable()
         {
-            Observer.Subscribe("OnSiegeDie", (Action<float>)IncreaseLevel);
+            Observer.Subscribe("OnMinionDie", (Action<float>)Levelup);
         }
 
         private void OnDisable()
         {
-            Observer.Unsubscribe("OnSiegeDie", (Action<float>)IncreaseLevel);
+            Observer.Unsubscribe("OnMinionDie", (Action<float>)Levelup);
         }
 
-        private void IncreaseLevel(float exp)
+        private void Levelup(float exp)
         {
             EXP += exp;
-            if(this.EXP >= 100)
+            if (this.EXP >= 100)
+            {
                 this.EXP -= 100;
+                ++Level;
+                Armor += 2;
+                DamageMultiplier += 0.1f;
+                CurrentHp += 40;
+                MaxHp += 40;
+                Observer.Publish("OnMaxHpChanged", MaxHp);
+                Observer.Publish("OnHealthChanged", CurrentHp);
+                Observer.Publish("OnLevelUp", Level);
+            }
         }
     }
 }

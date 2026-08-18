@@ -21,16 +21,23 @@ namespace STD.Core.UI
         private void OnEnable()
         {
             Observer.Subscribe("OnHealthChanged", (Action<float>) UpdateBar);
+            Observer.Subscribe("OnMaxHpChanged", (Action<float>) SetMaxHp);
         }
 
         private void OnDisable()
         {
             Observer.Unsubscribe("OnHealthChanged", (Action<float>) UpdateBar);
+            Observer.Unsubscribe("OnMaxHpChanged", (Action<float>) SetMaxHp);
         }
 
         private void UpdateBar(float value)
         {
             bar.value = Mathf.Clamp(value, 0, stats.MaxHp);
+        }
+
+        private void SetMaxHp(float maxhp)
+        {
+            bar.maxValue = maxhp;
         }
     }
 }

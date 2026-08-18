@@ -33,7 +33,8 @@ namespace STD.Core.Entity.SuperMinion
         public override void Die()
         {
             animationState.ChangeAnimation("Death_Base");
-            Destroy(this.gameObject);
+            --WaveGenerator.Singleton.SuperMinionRemains;
+            SuperMinionPool.Singleton.GoBackToPool(this);
         }
     }
 }

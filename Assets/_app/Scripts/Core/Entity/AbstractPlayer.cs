@@ -10,6 +10,7 @@ namespace STD.Core.Entity
     {
         [SerializeField] protected PlayerAnimationState animationState;
 
+        public int Level;
         public float MaxHp;
         public float CurrentHp;
         public float Armor;

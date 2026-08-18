@@ -2,10 +2,9 @@ using STD.Utils;
 
 namespace STD.Core.Entity.SiegeMinion
 {
-    public class SiegeMinionPool : ObjectPool<SiegeMinionScript>
+    public class SiegeMinionBulletPool : ObjectPool<SiegeMinionBullet>
     {
-        public static SiegeMinionPool Singleton;
-
+        public static SiegeMinionBulletPool Singleton;
         protected override void Awake() => Singleton = this;
     }
 }
