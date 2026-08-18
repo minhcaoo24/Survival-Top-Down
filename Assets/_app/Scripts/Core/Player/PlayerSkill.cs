@@ -131,6 +131,7 @@ namespace STD.Core.Player
 
                 await Awaitable.NextFrameAsync();
             }
+            PlayerAudio.Singleton.PlayE();
 
             transform.position = targetPosition;
 
@@ -158,6 +159,7 @@ namespace STD.Core.Player
             bombPrefab.transform.position = new Vector3(place.x, 0, place.z);
             bombPrefab.gameObject.SetActive(true);
             canPlaceBoommpppppp = false;
+            PlayerAudio.Singleton.PlayW();
 
             wCooldown.EnableCooldown();
             await Awaitable.WaitForSecondsAsync(BOMBBB_COOLDOWN + BOMBBB_EXPLOSION_DELAY);

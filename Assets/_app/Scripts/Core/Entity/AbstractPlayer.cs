@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using STD.Core.Interface;
 using STD.Core.Player;
 using STD.Utils;
@@ -25,20 +26,20 @@ namespace STD.Core.Entity
             DamageMultiplier = 0;
         }
 
-        public async void TakeDamage(int damage)
+        public void TakeDamage(int damage)
         {
             CurrentHp = CurrentHp - (damage - Armor);
             Observer.Publish("OnHealthChanged", CurrentHp);
             if (CurrentHp <= 0)
             {
-                await Die();
+                Die();
             }
         }
 
-        protected async Awaitable Die()
+        protected async void Die()
         {
             animationState.ChangeAnimation("Death");
-            await Awaitable.WaitForSecondsAsync(3);
+            Destroy(this, 3f);
             Time.timeScale = 0;
         }
     }

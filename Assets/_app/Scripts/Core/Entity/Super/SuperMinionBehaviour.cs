@@ -15,7 +15,7 @@ namespace STD.Core.Entity.SuperMinion
         private Node rootNode;
 
         private float nextAttackTime = 0f;
-        [SerializeField] private float attackCooldown = 5f;
+        [SerializeField] private float attackCooldown = 1f;
 
         private bool isAttacking;
         private float attackEndTime;
