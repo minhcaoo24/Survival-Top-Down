@@ -28,8 +28,7 @@ namespace STD.Core.Player.Bomb
             {
                 if (hit.TryGetComponent<IDamageable>(out IDamageable damageable))
                 {
-                    // damageable.TakeDamage(DASHBOMB_EXPLOSION_DAMAGE);
-                    Debug.Log("BOMOOOOOOOOO");
+                    damageable.TakeDamage(DASHBOMB_EXPLOSION_DAMAGE);
                 }
             }
 
@@ -41,30 +40,6 @@ namespace STD.Core.Player.Bomb
             await Awaitable.WaitForSecondsAsync(1f);
             explosionEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             gameObject.SetActive(false);
-        }
-
-        private void Explode()
-        {
-            Collider[] hits = Physics.OverlapSphere(
-                transform.position,
-                DASHBOMB_EXPLOSION_RADIUS,
-                enemyLayer
-            );
-
-            foreach (Collider hit in hits)
-            {
-                if (hit.TryGetComponent<IDamageable>(out IDamageable damageable))
-                {
-                    damageable.TakeDamage(DASHBOMB_EXPLOSION_DAMAGE);
-                }
-            }
-
-            if (explosionEffect != null)
-            {
-                explosionEffect.Play();
-            }
-
-            // gameObject.SetActive(false);
         }
 
         private void OnDrawGizmosSelected()

@@ -6,56 +6,23 @@ using UnityEngine;
 namespace STD.Core.Player
 {
     using static STD.Utils.Constants.Player;
-    public class PlayerScript : AbstractEntity
+    public class PlayerScript : AbstractPlayer
     {
-        [SerializeField] private PlayerAnimationState animationState;
-
-        protected override void Awake()
+        private void OnEnable()
         {
-            base.Awake();
-            MaxHP = PLAYER_HP;
-            SetHP(MaxHP);
+            Observer.Subscribe("OnSiegeDie", (Action<float>)IncreaseLevel);
         }
 
-        protected override void OnEnable()
+        private void OnDisable()
         {
-            Observer.Subscribe("OnLevelUp", (Action<int>)IncreaseEXP);
+            Observer.Unsubscribe("OnSiegeDie", (Action<float>)IncreaseLevel);
         }
 
-        protected override void OnDisable()
+        private void IncreaseLevel(float exp)
         {
-            Observer.Unsubscribe("OnLevelUp", (Action<int>)IncreaseEXP);
-        }
-
-        private async void Update()
-        {
-            if (CurrentHP <= 0)
-            {
-                animationState.ChangeAnimation("Death");
-                await Awaitable.WaitForSecondsAsync(2.3f);
-                Time.timeScale = 0;
-            }
-        }
-
-        public override void TakeDamage(int inDamage)
-        {
-            var damage = inDamage - Armor;
-            SetHP(-damage);
-            Observer.Publish("OnHealthChanged", CurrentHP);
-        }
-
-        private void IncreaseEXP(int value)
-        {
-            EXP += value;
-            if (EXP >= 100)
-            {
-                EXP -= 100;
-
-                MaxHP += 40;
-                SetHP(40);
-                SetArmor();
-                SetDamageMultiplier();
-            }
+            EXP += exp;
+            if(this.EXP >= 100)
+                this.EXP -= 100;
         }
     }
 }

@@ -13,24 +13,24 @@ namespace STD.Core.UI
 
         void Start()
         {
-            bar.maxValue = stats.MaxHP;
+            bar.maxValue = stats.MaxHp;
             bar.minValue = 0;
-            UpdateBar(stats.MaxHP);
+            UpdateBar(stats.MaxHp);
         }
 
         private void OnEnable()
         {
-            Observer.Subscribe("OnHealthChanged", (Action<int>) UpdateBar);
+            Observer.Subscribe("OnHealthChanged", (Action<float>) UpdateBar);
         }
 
         private void OnDisable()
         {
-            Observer.Unsubscribe("OnHealthChanged", (Action<int>) UpdateBar);
+            Observer.Unsubscribe("OnHealthChanged", (Action<float>) UpdateBar);
         }
 
-        private void UpdateBar(int value)
+        private void UpdateBar(float value)
         {
-            bar.value = Mathf.Clamp(value, 0, stats.MaxHP);
+            bar.value = Mathf.Clamp(value, 0, stats.MaxHp);
         }
     }
 }

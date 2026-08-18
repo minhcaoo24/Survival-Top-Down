@@ -36,8 +36,7 @@ namespace STD.Core.Player.Bomb
             {
                 if (hit.TryGetComponent<IDamageable>(out IDamageable damageable))
                 {
-                    // damageable.TakeDamage(DASHBOMB_EXPLOSION_DAMAGE);
-                    Debug.Log("BOMOOOOOOOOO");
+                    damageable.TakeDamage(DASHBOMB_EXPLOSION_DAMAGE);
                 }
             }
 

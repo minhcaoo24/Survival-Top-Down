@@ -143,7 +143,6 @@ namespace STD.Core.Player
             dashBomb.gameObject.SetActive(true);
             eCooldown.EnableCooldown();
             await Awaitable.WaitForSecondsAsync(DASH_COOLDOWN);
-            Debug.Log("Can dash");
 
             canDash = true;
         }
@@ -156,13 +155,12 @@ namespace STD.Core.Player
 
             Vector3 place = this.transform.position;
 
-            bombPrefab.transform.position = new Vector3(place.x, 1, place.z);
+            bombPrefab.transform.position = new Vector3(place.x, 0, place.z);
             bombPrefab.gameObject.SetActive(true);
             canPlaceBoommpppppp = false;
 
             wCooldown.EnableCooldown();
             await Awaitable.WaitForSecondsAsync(BOMBBB_COOLDOWN + BOMBBB_EXPLOSION_DELAY);
-            Debug.Log("Can place boooooooombbbbbbbbbbb");
             canPlaceBoommpppppp = true;
         }
         private async void WSkill() => await Bombbb();

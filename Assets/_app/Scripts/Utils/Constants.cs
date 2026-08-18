@@ -21,7 +21,7 @@ namespace STD.Utils
             public const float BUTLLET_SPEED = 5f;
             public const float BULLET_ANGLE = 15f;
             public const float BULLET_DESTROY_TIME = 0.25f;
-            public const float BULLET_COLLIDER_DISABLE_TIME = 0.05f;
+            public const float BULLET_COLLIDER_DISABLE_TIME = 0.09f;
         }
 
         public struct Bomb

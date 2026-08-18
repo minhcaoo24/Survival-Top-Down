@@ -25,7 +25,7 @@ namespace STD.Core.Entity.SiegeMinion
             );
         }
 
-        private async void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
             {
