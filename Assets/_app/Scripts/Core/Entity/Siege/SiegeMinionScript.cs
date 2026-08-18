@@ -43,7 +43,7 @@ namespace STD.Core.Entity.SiegeMinion
             if(CurrentHp <= 0)
             {
                 Die();
-                Observer.Publish("OnSiegeDie", ExpRecevied);
+                Observer.Publish("OnMinionDie", ExpRecevied);
             }
         }
     }

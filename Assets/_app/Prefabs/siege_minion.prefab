@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 208345617159297903}
   - component: {fileID: 5333026361236440998}
   - component: {fileID: 7819500895705537854}
+  - component: {fileID: 5690870852323909431}
   m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
@@ -92,12 +93,25 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 180
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 180
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5690870852323909431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088753393279329514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5127fec9b5bf84418a001428adc36683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::STD.Core.Entity.SiegeMinion.SiegeMinionUpdateUI
+  bar: {fileID: 7819500895705537854}
 --- !u!1 &2349976770216825721
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,5 +773,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9edb29ade658943a694caecb09e18bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::STD.Core.Entity.SiegeMinion.SiegeMinionScript
-  MaxHP: 0
-  animationState: {fileID: 0}
+  MaxHp: 0
+  CurrentHp: 0
+  ExpRecevied: 0
+  animationState: {fileID: 1392615551105702978}
+  updateUI: {fileID: 5690870852323909431}
