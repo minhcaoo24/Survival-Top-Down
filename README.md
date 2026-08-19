@@ -4,6 +4,8 @@ Một game **3D Action/MOBA Prototype** được phát triển bằng Unity, l�
 
 Project tập trung vào việc xây dựng hệ thống gameplay có tính module, bao gồm điều khiển nhân vật, combat, kỹ năng, Enemy AI, Object Pooling, Observer Pattern và hệ thống âm thanh.
 
+Sử dụng Unity 6000.3.5f2 LTS 
+
 ---
 
 ## 🎯 Tổng quan
